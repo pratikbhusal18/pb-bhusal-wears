@@ -1,11 +1,12 @@
-# PB. Bhusal Wears 🎨👕
+# PB. Bhusal Wears 🏔️
 
-A casual, colorful, and fun clothing company website built with **Next.js**, **React**, **TypeScript**, and **Tailwind CSS**. Full-stack ready architecture with component-based design, product data layer, and automated deployment.
+A heritage-inspired clothing brand website built with **Next.js 16**, **React 19**, **TypeScript**, and **Tailwind CSS 4**. Features a full shopping experience with product catalog, detail pages, shopping cart, and automated deployment.
 
-![License](https://img.shields.io/badge/license-MIT-coral)
+![License](https://img.shields.io/badge/license-MIT-DC143C)
 ![Deploy](https://img.shields.io/github/actions/workflow/status/pratikbhusal18/pb-bhusal-wears/deploy.yml?label=deploy)
 ![Next.js](https://img.shields.io/badge/Next.js-16-black)
 ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4)
+![Products](https://img.shields.io/badge/products-16-E89B24)
 
 🌐 **Live Site:** [pratikbhusal18.github.io/pb-bhusal-wears](https://pratikbhusal18.github.io/pb-bhusal-wears/)
 
@@ -14,14 +15,24 @@ A casual, colorful, and fun clothing company website built with **Next.js**, **R
 ## Screenshots
 
 ### 🏠 Home Page
-Hero banner with gradient background, featured products, customer testimonials, and newsletter signup.
+Mountain-themed hero with prayer flag decorations, featured products, testimonials, and newsletter signup.
 
 ![Home Page](public/screenshots/home.png)
 
 ### 🛍️ Shop Page
-Full product catalog with interactive category filters (T-Shirts, Hoodies, Bottoms, Accessories).
+16 products with real photography, interactive category filters, and Add to Cart buttons.
 
 ![Shop Page](public/screenshots/shop.png)
+
+### 📄 Product Detail Page
+Full product view with size/color selectors, quantity picker, and "You Might Also Like" section.
+
+![Product Detail](public/screenshots/product.png)
+
+### 🛒 Shopping Cart
+Cart with product images, quantity controls, order summary, and free shipping calculator.
+
+![Cart](public/screenshots/cart.png)
 
 ### 📖 About Page
 Brand story, company timeline, core values, and team section.
@@ -44,27 +55,39 @@ Fully responsive design with hamburger navigation and stacked layouts.
 
 ## Overview
 
-PB - Bhusal Wears is an e-commerce storefront for a clothing brand that celebrates self-expression through casual, comfortable, and eco-friendly fashion. Built with a modern React architecture, it's designed to scale into a full-stack application with database, shopping cart, and payment integration.
+PB - Bhusal Wears is an e-commerce storefront for a heritage-inspired clothing brand. The Himalayan-themed design features crimson, saffron gold, and deep blue tones with mountain motifs throughout. Built with a modern React architecture, ready to scale into a full-stack application.
 
 ### Pages
 
 | Page | Route | Description |
 |------|-------|-------------|
-| **Home** | `/` | Hero banner, feature strip, trending products, testimonials, newsletter |
-| **Shop** | `/shop` | Product catalog with real-time category filtering |
-| **About** | `/about` | Brand story, timeline, values, team cards |
+| **Home** | `/` | Mountain hero, prayer flags, featured products, testimonials, newsletter |
+| **Shop** | `/shop` | 16 products with category filtering and real photography |
+| **Product Detail** | `/shop/[id]` | Size/color selector, quantity picker, related products |
+| **Cart** | `/cart` | Item management, quantity controls, order summary |
+| **About** | `/about` | Brand story, timeline, values, team |
 | **Contact** | `/contact` | Contact form, business info, FAQ accordion |
+
+### Product Catalog (16 items)
+
+| Category | Products |
+|----------|----------|
+| **T-Shirts** | Everest Sunrise Tee, Sherpa Trail Tee, Base Camp Essential Tee, Khumbu Thermal Henley |
+| **Hoodies** | Annapurna Color Block Hoodie, Yeti Oversized Hoodie, Prayer Flag Zip-Up, Dhaulagiri Parka, Rhododendron Fleece Vest, Ridge Runner Windbreaker |
+| **Bottoms** | Cloud Walker Joggers, Trekker Cargo Shorts |
+| **Accessories** | Summit Cap, Himalayan Beanie, Expedition Tote, Trail Pattern Socks |
 
 ### Features
 
-- 🎨 Casual & fun design with a playful color palette (coral, yellow, teal, sky blue)
-- 📱 Fully responsive — mobile, tablet, and desktop
-- ⚛️ React components with TypeScript for type safety
-- 🛍️ Product data layer ready for database integration
-- 🎯 Interactive category filtering on Shop page
-- 📬 Newsletter and contact form with state management
-- 🧭 App Router with sticky navbar and active page indicators
-- 🚀 Static export for fast GitHub Pages deployment
+- 🏔️ Himalayan-inspired design theme (crimson, saffron, deep blue)
+- 🛒 Full shopping cart with add/remove, quantity controls, order summary
+- 📄 Individual product pages with size & color selectors
+- 🖼️ Real product photography (royalty-free from Unsplash)
+- 🏷️ Category filtering on Shop page
+- 🚚 Free shipping calculator (orders over $75)
+- 📱 Fully responsive — mobile, tablet, desktop
+- ⚛️ React components with TypeScript
+- 🚀 Static export with automated GitHub Pages deployment
 
 ---
 
@@ -75,7 +98,7 @@ PB - Bhusal Wears is an e-commerce storefront for a clothing brand that celebrat
 | **Next.js 16** | React framework with App Router and static export |
 | **React 19** | Component-based UI |
 | **TypeScript** | Type safety |
-| **Tailwind CSS 4** | Utility-first styling |
+| **Tailwind CSS 4** | Utility-first styling with custom Himalayan theme |
 | **GitHub Actions** | CI/CD pipeline |
 | **GitHub Pages** | Hosting |
 
@@ -86,25 +109,35 @@ PB - Bhusal Wears is an e-commerce storefront for a clothing brand that celebrat
 ```
 pb-bhusal-wears/
 ├── .github/workflows/
-│   └── deploy.yml              # GitHub Pages CI/CD
+│   └── deploy.yml                  # GitHub Pages CI/CD
 ├── public/
-│   └── screenshots/            # README screenshots
+│   ├── products/                   # Product photography (16 images)
+│   └── screenshots/                # README screenshots
 ├── src/
 │   ├── app/
-│   │   ├── layout.tsx          # Root layout (Navbar + Footer)
-│   │   ├── page.tsx            # Home page
-│   │   ├── globals.css         # Tailwind + custom theme
-│   │   ├── shop/page.tsx       # Shop page
-│   │   ├── about/page.tsx      # About page
-│   │   └── contact/page.tsx    # Contact page
+│   │   ├── layout.tsx              # Root layout (Navbar + Footer + CartProvider)
+│   │   ├── page.tsx                # Home page
+│   │   ├── globals.css             # Tailwind + Himalayan color theme
+│   │   ├── shop/
+│   │   │   ├── page.tsx            # Shop catalog with filters
+│   │   │   └── [id]/
+│   │   │       ├── page.tsx        # Static params generation
+│   │   │       └── ProductDetailClient.tsx  # Product detail UI
+│   │   ├── cart/page.tsx           # Shopping cart
+│   │   ├── about/page.tsx          # About page
+│   │   └── contact/page.tsx        # Contact & FAQ
 │   ├── components/
-│   │   ├── Navbar.tsx          # Sticky nav with mobile menu
-│   │   ├── Footer.tsx          # Site footer
-│   │   ├── ProductCard.tsx     # Reusable product card
-│   │   └── Newsletter.tsx      # Email signup form
+│   │   ├── Navbar.tsx              # Sticky nav with cart icon
+│   │   ├── Footer.tsx              # Footer with prayer flag strip
+│   │   ├── ProductCard.tsx         # Product card with image & Add to Cart
+│   │   ├── AddToCartButton.tsx     # Animated add to cart button
+│   │   ├── CartIcon.tsx            # Cart icon with item count badge
+│   │   └── Newsletter.tsx          # Email signup form
+│   ├── context/
+│   │   └── CartContext.tsx          # Shopping cart state management
 │   └── data/
-│       └── products.ts         # Product catalog data
-├── next.config.ts              # Next.js config (static export)
+│       └── products.ts             # Product catalog (16 products)
+├── next.config.ts                  # Static export + basePath config
 ├── package.json
 └── README.md
 ```
@@ -258,6 +291,7 @@ npx serve out
 |------|-------|
 | Brand colors | `src/app/globals.css` → `@theme inline` block |
 | Products | `src/data/products.ts` |
+| Product images | `public/products/` (just replace the .jpg files) |
 | Company info | `src/app/about/page.tsx` |
 | Contact details | `src/app/contact/page.tsx` |
 | Navigation links | `src/components/Navbar.tsx` |
@@ -265,17 +299,22 @@ npx serve out
 
 ### Adding a new product
 
-Add an entry to `src/data/products.ts`:
+1. Add a product image to `public/products/your-product.jpg`
+2. Add an entry to `src/data/products.ts`:
 
 ```typescript
 {
-  id: "13",
+  id: "17",
   name: "Your Product Name",
   category: "tshirts",
   categoryLabel: "T-Shirts",
   price: 29.99,
   emoji: "👕",
-  badge: "NEW",
+  image: "/products/your-product.jpg",
+  description: "Your product description.",
+  sizes: ["S", "M", "L", "XL"],
+  colors: ["Color 1", "Color 2"],
+  related: ["1", "2", "3"],
 }
 ```
 
@@ -284,14 +323,13 @@ Add an entry to `src/data/products.ts`:
 ## Roadmap
 
 - [ ] **Prisma + SQLite** — Move products to a database
-- [ ] **Shopping cart** — React context with add/remove/quantity
 - [ ] **Stripe checkout** — Real payment processing
 - [ ] **User auth** — NextAuth.js with login & order history
 - [ ] **Admin dashboard** — Manage products and orders
-- [ ] **Product detail pages** — Individual product views
 - [ ] **Search & filters** — Full-text search, price/size filtering
 - [ ] **Dark mode** — Theme toggle
-- [ ] **Real product images** — Replace emoji placeholders
+- [ ] **Wishlist** — Save favorite products
+- [ ] **Order tracking** — Post-purchase status updates
 
 ---
 
@@ -301,4 +339,4 @@ This project is open source under the [MIT License](LICENSE).
 
 ---
 
-<p align="center">Made with ❤️ by <strong>PB - Bhusal Wears</strong></p>
+<p align="center">Made with ❤️ by <strong>PB - Bhusal Wears</strong> 🏔️</p>
