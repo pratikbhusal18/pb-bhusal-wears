@@ -11,9 +11,9 @@ const faqs = [
 ];
 
 const contactDetails = [
-  { emoji: "📧", text: "hello@bhusalwears.com" },
+  { emoji: "📧", text: "pratikbhusal18@yahoo.com" },
   { emoji: "📱", text: "+1 (555) PB-WEARS" },
-  { emoji: "📍", text: "Austin, TX — Shipping Worldwide 🌍" },
+  { emoji: "📍", text: "Haslet, TX — Shipping Worldwide 🌍" },
   { emoji: "⏰", text: "Mon-Fri: 9am - 6pm CT" },
 ];
 
