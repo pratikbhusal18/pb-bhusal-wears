@@ -17,7 +17,7 @@ export default function Footer() {
               <span className="text-saffron">𑐥𑐧</span> Bhusal Wears
             </div>
             <p className="text-white/60 text-sm">
-              From the Himalayas to your wardrobe. Clothing inspired by Nepali heritage, crafted for the modern world.
+              From the Himalayas to your wardrobe. Clothing inspired by heritage, crafted for the modern world.
             </p>
           </div>
           <div>
@@ -51,7 +51,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-white/10 pt-6 text-center text-white/40 text-sm">
-          &copy; {new Date().getFullYear()} PB - Bhusal Wears. All rights reserved. Made with ❤️ from Nepal 🇳🇵
+          &copy; {new Date().getFullYear()} PB - Bhusal Wears. All rights reserved. Made with ❤️
         </div>
       </div>
     </footer>

@@ -32,7 +32,7 @@ export default function ContactPage() {
       {/* Hero */}
       <section className="py-16 pb-10 text-center bg-gradient-to-br from-himalaya via-himalaya-light to-himalaya text-white">
         <h1 className="text-5xl font-black tracking-tight">Get in Touch 🙏</h1>
-        <p className="text-white/70 mt-2 text-lg">We&apos;d love to hear from you — Namaste!</p>
+        <p className="text-white/70 mt-2 text-lg">We&apos;d love to hear from you!</p>
       </section>
 
       {/* Contact Grid */}

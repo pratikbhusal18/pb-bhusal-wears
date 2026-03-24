@@ -11,7 +11,7 @@ const features = [
 ];
 
 const testimonials = [
-  { stars: 5, text: "The Dhaka-inspired patterns are stunning! I feel connected to Nepal every time I wear my hoodie. Absolutely love the quality.", author: "Priya S." },
+  { stars: 5, text: "The heritage-inspired patterns are stunning! I feel connected to my roots every time I wear my hoodie. Absolutely love the quality.", author: "Priya S." },
   { stars: 5, text: "Finally a brand that celebrates South Asian heritage with modern style. The joggers are incredibly comfortable!", author: "Jake T." },
   { stars: 5, text: "Ordered the tee and cap — both arrived beautifully packaged. The attention to detail and cultural touches are amazing.", author: "Anika R." },
 ];
@@ -37,7 +37,7 @@ export default function Home() {
             From the <span className="text-saffron">Himalayas</span><br />to Your Wardrobe 🏔️
           </h1>
           <p className="text-lg text-white/80 max-w-xl mx-auto mb-9">
-            Clothing inspired by Nepali heritage — where ancient traditions meet modern style. Wear your roots with pride.
+            Clothing inspired by heritage — where ancient traditions meet modern style. Wear your roots with pride.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Link href="/shop" className="bg-crimson text-white px-9 py-4 rounded-full font-bold shadow-[0_6px_20px_rgba(220,20,60,0.35)] hover:bg-crimson-dark hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(220,20,60,0.45)] transition-all">

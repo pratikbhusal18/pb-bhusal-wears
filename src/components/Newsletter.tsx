@@ -19,7 +19,7 @@ export default function Newsletter() {
     <section className="py-20 bg-gradient-to-r from-crimson to-himalaya text-white text-center">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl font-extrabold mb-2">Join the Bhusal Fam 🏔️</h2>
-        <p className="opacity-90 mb-6">Get early access to drops, exclusive discounts, and stories from Nepal in your inbox.</p>
+        <p className="opacity-90 mb-6">Get early access to drops, exclusive discounts, and good vibes in your inbox.</p>
         {submitted ? (
           <p className="text-xl font-bold animate-bounce">Dhanyabad! Thanks for subscribing! 🙏</p>
         ) : (

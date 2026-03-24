@@ -8,9 +8,9 @@ const values = [
 ];
 
 const timeline = [
-  { year: "2024", title: "The Spark ✨", text: "Pratik, inspired by Nepali Dhaka fabric patterns during a visit to Kathmandu, envisioned a clothing brand that bridges Himalayan heritage with modern streetwear." },
-  { year: "2025", title: "First Collection 🎉", text: "Launched our debut collection of 12 pieces inspired by Nepali motifs. Sold out in the first week! The diaspora community embraced the cultural connection." },
-  { year: "2026", title: "Growing Global 🚀", text: "Expanded to 50+ products, partnered with eco-friendly suppliers in Nepal and beyond, building a worldwide community proud of their heritage." },
+  { year: "2024", title: "The Spark ✨", text: "Pratik, inspired by traditional fabric patterns during his travels, envisioned a clothing brand that bridges cultural heritage with modern streetwear." },
+  { year: "2025", title: "First Collection 🎉", text: "Launched our debut collection of 12 pieces inspired by traditional motifs. Sold out in the first week! The community embraced the cultural connection." },
+  { year: "2026", title: "Growing Global 🚀", text: "Expanded to 50+ products, partnered with eco-friendly suppliers worldwide, building a global community proud of their heritage." },
 ];
 
 const team = [
@@ -25,8 +25,8 @@ export default function AboutPage() {
     <>
       {/* Hero */}
       <section className="py-16 pb-10 text-center bg-gradient-to-br from-himalaya via-himalaya-light to-himalaya text-white">
-        <h1 className="text-5xl font-black tracking-tight">Our Story 🇳🇵</h1>
-        <p className="text-white/70 mt-2 text-lg">Rooted in Nepal, designed for the world</p>
+        <h1 className="text-5xl font-black tracking-tight">Our Story 📖</h1>
+        <p className="text-white/70 mt-2 text-lg">Rooted in heritage, designed for the world</p>
       </section>
 
       {/* About Grid */}
@@ -41,10 +41,10 @@ export default function AboutPage() {
                 Where Himalayan heritage meets modern fashion<span className="text-crimson">.</span>
               </h2>
               <p className="text-gray mb-4 text-lg leading-relaxed">
-                PB - Bhusal Wears was born from the rich tapestry of Nepali culture. Inspired by the vibrant Dhaka fabrics, the majesty of the Himalayas, and the warmth of Nepali hospitality, we create clothing that tells a story — your story, our story.
+                PB - Bhusal Wears was born from a rich tapestry of cultural heritage. Inspired by vibrant traditional fabrics, the majesty of the mountains, and the warmth of community, we create clothing that tells a story — your story, our story.
               </p>
               <p className="text-gray mb-6 text-lg leading-relaxed">
-                Every piece blends traditional Nepali artistry with contemporary design. We source eco-friendly materials and work with local artisans to ensure every item carries the spirit of Nepal — from the mountains to your wardrobe.
+                Every piece blends traditional artistry with contemporary design. We source eco-friendly materials and work with local artisans to ensure every item carries the spirit of our heritage — from the mountains to your wardrobe.
               </p>
               <div className="flex gap-6">
                 {values.map(({ emoji, label }) => (
@@ -64,7 +64,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-extrabold tracking-tight">Our Journey<span className="text-crimson">.</span></h2>
-            <p className="text-gray mt-2">From Kathmandu dreams to global fashion</p>
+            <p className="text-gray mt-2">From humble dreams to global fashion</p>
           </div>
           <div className="max-w-2xl mx-auto space-y-6">
             {timeline.map(({ year, title, text }) => (
