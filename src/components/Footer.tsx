@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
           <div>
             <div className="text-2xl font-extrabold tracking-tight mb-3">
-              <span className="text-saffron">𑐥𑐧</span> Bhusal Wears
+              PB<span className="text-saffron">.</span> Bhusal Wears
             </div>
             <p className="text-white/60 text-sm">
               From the Himalayas to your wardrobe. Clothing inspired by heritage, crafted for the modern world.

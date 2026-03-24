@@ -20,7 +20,7 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-himalaya/95 backdrop-blur-md border-b border-white/10 text-white">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="text-2xl font-extrabold tracking-tight">
-          <span className="text-saffron">𑐥𑐧</span> Bhusal Wears
+          PB<span className="text-saffron">.</span> Bhusal Wears
         </Link>
 
         {/* Desktop links */}
