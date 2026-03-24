@@ -15,9 +15,9 @@ export default function ShopPage() {
   return (
     <>
       {/* Hero */}
-      <section className="py-16 pb-10 text-center bg-gradient-to-br from-[#FFF1F1] via-[#FFF9E6] to-[#E6F0FF]">
-        <h1 className="text-5xl font-black tracking-tight">Shop All 🛍️</h1>
-        <p className="text-gray mt-2 text-lg">Find your next favorite fit</p>
+      <section className="py-16 pb-10 text-center bg-gradient-to-br from-himalaya via-himalaya-light to-himalaya text-white">
+        <h1 className="text-5xl font-black tracking-tight">Shop All 🏔️</h1>
+        <p className="text-white/70 mt-2 text-lg">Heritage-inspired clothing for the modern explorer</p>
       </section>
 
       {/* Products */}
@@ -31,8 +31,8 @@ export default function ShopPage() {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-6 py-2.5 rounded-full border-2 font-semibold text-sm transition-all ${
                   activeCategory === cat
-                    ? "bg-coral text-white border-coral"
-                    : "bg-white border-gray-200 hover:bg-coral hover:text-white hover:border-coral"
+                    ? "bg-crimson text-white border-crimson"
+                    : "bg-white border-gray-200 hover:bg-crimson hover:text-white hover:border-crimson"
                 }`}
               >
                 {cat}

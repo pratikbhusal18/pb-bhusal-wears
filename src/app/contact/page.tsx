@@ -30,9 +30,9 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="py-16 pb-10 text-center bg-gradient-to-br from-[#E6F0FF] via-[#FFF1F1] to-[#FFF9E6]">
-        <h1 className="text-5xl font-black tracking-tight">Get in Touch 💬</h1>
-        <p className="text-gray mt-2 text-lg">We&apos;d love to hear from you</p>
+      <section className="py-16 pb-10 text-center bg-gradient-to-br from-himalaya via-himalaya-light to-himalaya text-white">
+        <h1 className="text-5xl font-black tracking-tight">Get in Touch 🙏</h1>
+        <p className="text-white/70 mt-2 text-lg">We&apos;d love to hear from you — Namaste!</p>
       </section>
 
       {/* Contact Grid */}
@@ -62,11 +62,11 @@ export default function ContactPage() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                <input type="text" placeholder="Your Name" required className="px-5 py-3.5 border-2 border-gray-200 rounded-xl outline-none focus:border-coral transition-colors" />
-                <input type="email" placeholder="Your Email" required className="px-5 py-3.5 border-2 border-gray-200 rounded-xl outline-none focus:border-coral transition-colors" />
-                <input type="text" placeholder="Subject" className="px-5 py-3.5 border-2 border-gray-200 rounded-xl outline-none focus:border-coral transition-colors" />
-                <textarea placeholder="Your Message..." required rows={5} className="px-5 py-3.5 border-2 border-gray-200 rounded-xl outline-none focus:border-coral transition-colors resize-vertical" />
-                <button type="submit" className="bg-coral text-white px-8 py-3.5 rounded-full font-bold shadow-[0_6px_20px_rgba(255,107,107,0.35)] hover:bg-coral-dark hover:-translate-y-0.5 transition-all self-start">
+                <input type="text" placeholder="Your Name" required className="px-5 py-3.5 border-2 border-gray-200 rounded-xl outline-none focus:border-crimson transition-colors" />
+                <input type="email" placeholder="Your Email" required className="px-5 py-3.5 border-2 border-gray-200 rounded-xl outline-none focus:border-crimson transition-colors" />
+                <input type="text" placeholder="Subject" className="px-5 py-3.5 border-2 border-gray-200 rounded-xl outline-none focus:border-crimson transition-colors" />
+                <textarea placeholder="Your Message..." required rows={5} className="px-5 py-3.5 border-2 border-gray-200 rounded-xl outline-none focus:border-crimson transition-colors resize-vertical" />
+                <button type="submit" className="bg-crimson text-white px-8 py-3.5 rounded-full font-bold shadow-[0_6px_20px_rgba(220,20,60,0.35)] hover:bg-crimson-dark hover:-translate-y-0.5 transition-all self-start">
                   Send Message →
                 </button>
               </form>
@@ -79,7 +79,7 @@ export default function ContactPage() {
       <section className="py-20 bg-light">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-extrabold tracking-tight">FAQ<span className="text-coral">.</span></h2>
+            <h2 className="text-4xl font-extrabold tracking-tight">FAQ<span className="text-crimson">.</span></h2>
             <p className="text-gray mt-2">Quick answers to common questions</p>
           </div>
           <div className="max-w-2xl mx-auto space-y-4">
@@ -90,7 +90,7 @@ export default function ContactPage() {
                   className="w-full px-6 py-5 flex justify-between items-center text-left font-bold text-lg"
                 >
                   {q}
-                  <span className={`text-coral text-2xl transition-transform ${openFaq === i ? "rotate-45" : ""}`}>+</span>
+                  <span className={`text-crimson text-2xl transition-transform ${openFaq === i ? "rotate-45" : ""}`}>+</span>
                 </button>
                 {openFaq === i && (
                   <div className="px-6 pb-5 text-gray">{a}</div>

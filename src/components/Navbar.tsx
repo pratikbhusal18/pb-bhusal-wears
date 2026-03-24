@@ -17,10 +17,10 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/92 backdrop-blur-md border-b border-black/5">
+    <nav className="sticky top-0 z-50 bg-himalaya/95 backdrop-blur-md border-b border-white/10 text-white">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="text-2xl font-extrabold tracking-tight">
-          PB<span className="text-coral">.</span> Bhusal Wears
+          <span className="text-saffron">𑐥𑐧</span> Bhusal Wears
         </Link>
 
         {/* Desktop links */}
@@ -29,8 +29,8 @@ export default function Navbar() {
             <li key={href}>
               <Link
                 href={href}
-                className={`relative font-medium transition-colors hover:text-coral after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[3px] after:rounded after:bg-coral after:transition-all ${
-                  pathname === href ? "text-coral after:w-full" : "after:w-0 hover:after:w-full"
+                className={`relative font-medium transition-colors hover:text-saffron after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[3px] after:rounded after:bg-saffron after:transition-all ${
+                  pathname === href ? "text-saffron after:w-full" : "after:w-0 hover:after:w-full"
                 }`}
               >
                 {label}
@@ -57,12 +57,12 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <ul className="md:hidden bg-white px-6 pb-4 space-y-3 shadow-lg">
+        <ul className="md:hidden bg-himalaya px-6 pb-4 space-y-3 shadow-lg">
           {links.map(({ href, label }) => (
             <li key={href}>
               <Link
                 href={href}
-                className={`block font-medium ${pathname === href ? "text-coral" : ""}`}
+                className={`block font-medium ${pathname === href ? "text-saffron" : "text-white/80"}`}
                 onClick={() => setOpen(false)}
               >
                 {label}

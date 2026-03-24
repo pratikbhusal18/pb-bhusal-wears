@@ -15,7 +15,7 @@ export default function CartPage() {
           <p className="text-gray text-lg mb-8">Looks like you haven&apos;t added anything yet!</p>
           <Link
             href="/shop"
-            className="bg-coral text-white px-9 py-4 rounded-full font-bold shadow-[0_6px_20px_rgba(255,107,107,0.35)] hover:bg-coral-dark hover:-translate-y-0.5 transition-all inline-block"
+            className="bg-crimson text-white px-9 py-4 rounded-full font-bold shadow-[0_6px_20px_rgba(220,20,60,0.35)] hover:bg-crimson-dark hover:-translate-y-0.5 transition-all inline-block"
           >
             Start Shopping →
           </Link>
@@ -54,7 +54,7 @@ export default function CartPage() {
                   <div className="flex-1 min-w-0">
                     <h3 className="font-bold text-lg truncate">{product.name}</h3>
                     <p className="text-gray text-sm">{product.categoryLabel}</p>
-                    <p className="text-coral font-extrabold text-lg mt-1">
+                    <p className="text-crimson font-extrabold text-lg mt-1">
                       ${(product.price * quantity).toFixed(2)}
                     </p>
                   </div>
@@ -63,14 +63,14 @@ export default function CartPage() {
                   <div className="flex items-center gap-2">
                     <button
                       onClick={() => updateQuantity(product.id, quantity - 1)}
-                      className="w-9 h-9 rounded-full border-2 border-gray-200 flex items-center justify-center font-bold hover:border-coral hover:text-coral transition-colors"
+                      className="w-9 h-9 rounded-full border-2 border-gray-200 flex items-center justify-center font-bold hover:border-crimson hover:text-crimson transition-colors"
                     >
                       −
                     </button>
                     <span className="w-8 text-center font-bold">{quantity}</span>
                     <button
                       onClick={() => updateQuantity(product.id, quantity + 1)}
-                      className="w-9 h-9 rounded-full border-2 border-gray-200 flex items-center justify-center font-bold hover:border-coral hover:text-coral transition-colors"
+                      className="w-9 h-9 rounded-full border-2 border-gray-200 flex items-center justify-center font-bold hover:border-crimson hover:text-crimson transition-colors"
                     >
                       +
                     </button>
@@ -122,17 +122,17 @@ export default function CartPage() {
                 <hr className="my-3" />
                 <div className="flex justify-between text-lg">
                   <span className="font-bold">Total</span>
-                  <span className="font-extrabold text-coral">${total.toFixed(2)}</span>
+                  <span className="font-extrabold text-crimson">${total.toFixed(2)}</span>
                 </div>
               </div>
 
-              <button className="w-full mt-6 bg-coral text-white py-4 rounded-full font-bold text-lg shadow-[0_6px_20px_rgba(255,107,107,0.35)] hover:bg-coral-dark hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(255,107,107,0.45)] transition-all">
+              <button className="w-full mt-6 bg-crimson text-white py-4 rounded-full font-bold text-lg shadow-[0_6px_20px_rgba(220,20,60,0.35)] hover:bg-crimson-dark hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(220,20,60,0.45)] transition-all">
                 Checkout →
               </button>
 
               <Link
                 href="/shop"
-                className="block text-center mt-4 text-gray hover:text-coral transition-colors text-sm font-medium"
+                className="block text-center mt-4 text-gray hover:text-crimson transition-colors text-sm font-medium"
               >
                 ← Continue Shopping
               </Link>

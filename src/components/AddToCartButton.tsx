@@ -20,7 +20,7 @@ export default function AddToCartButton({ product }: { product: Product }) {
       className={`w-full mt-3 py-2.5 rounded-full font-bold text-sm transition-all ${
         added
           ? "bg-teal text-white scale-95"
-          : "bg-coral text-white hover:bg-coral-dark hover:shadow-lg"
+          : "bg-crimson text-white hover:bg-crimson-dark hover:shadow-lg"
       }`}
     >
       {added ? "✓ Added!" : "Add to Cart"}

@@ -21,7 +21,7 @@ export default function ProductDetailClient({ id }: { id: string }) {
         <div className="text-8xl mb-6">😢</div>
         <h1 className="text-4xl font-black mb-4">Product Not Found</h1>
         <p className="text-gray mb-8">This product doesn&apos;t exist or has been removed.</p>
-        <Link href="/shop" className="bg-coral text-white px-9 py-4 rounded-full font-bold hover:bg-coral-dark transition-all inline-block">
+        <Link href="/shop" className="bg-crimson text-white px-9 py-4 rounded-full font-bold hover:bg-crimson-dark transition-all inline-block">
           Back to Shop →
         </Link>
       </section>
@@ -45,11 +45,11 @@ export default function ProductDetailClient({ id }: { id: string }) {
       {/* Breadcrumb */}
       <div className="bg-light border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-3 text-sm text-gray">
-          <Link href="/" className="hover:text-coral transition-colors">Home</Link>
+          <Link href="/" className="hover:text-crimson transition-colors">Home</Link>
           <span className="mx-2">›</span>
-          <Link href="/shop" className="hover:text-coral transition-colors">Shop</Link>
+          <Link href="/shop" className="hover:text-crimson transition-colors">Shop</Link>
           <span className="mx-2">›</span>
-          <span className="hover:text-coral transition-colors">{product.categoryLabel}</span>
+          <span className="hover:text-crimson transition-colors">{product.categoryLabel}</span>
           <span className="mx-2">›</span>
           <span className="text-dark font-medium">{product.name}</span>
         </div>
@@ -62,11 +62,11 @@ export default function ProductDetailClient({ id }: { id: string }) {
             {/* Product Image */}
             <div className="relative">
               {product.badge && (
-                <span className="absolute top-4 left-4 bg-yellow text-dark px-4 py-1.5 rounded-full text-sm font-bold z-10">
+                <span className="absolute top-4 left-4 bg-saffron text-dark px-4 py-1.5 rounded-full text-sm font-bold z-10">
                   {product.badge}
                 </span>
               )}
-              <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl h-[500px] flex items-center justify-center text-[10rem] select-none">
+              <div className="bg-gradient-to-br from-snow to-sky/10 rounded-2xl h-[500px] flex items-center justify-center text-[10rem] select-none">
                 {product.emoji}
               </div>
             </div>
@@ -78,7 +78,7 @@ export default function ProductDetailClient({ id }: { id: string }) {
 
               {/* Price */}
               <div className="flex items-baseline gap-3 mb-6">
-                <span className="text-3xl font-extrabold text-coral">${product.price.toFixed(2)}</span>
+                <span className="text-3xl font-extrabold text-crimson">${product.price.toFixed(2)}</span>
                 {product.oldPrice && (
                   <span className="text-lg text-gray line-through">${product.oldPrice.toFixed(2)}</span>
                 )}
@@ -95,7 +95,7 @@ export default function ProductDetailClient({ id }: { id: string }) {
               {/* Size Selector */}
               <div className="mb-6">
                 <h3 className="font-bold text-sm uppercase tracking-wider mb-3">
-                  Size {selectedSize && <span className="text-coral normal-case">— {selectedSize}</span>}
+                  Size {selectedSize && <span className="text-crimson normal-case">— {selectedSize}</span>}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {product.sizes.map((size) => (
@@ -104,8 +104,8 @@ export default function ProductDetailClient({ id }: { id: string }) {
                       onClick={() => setSelectedSize(size)}
                       className={`px-5 py-2.5 rounded-lg border-2 font-semibold text-sm transition-all ${
                         selectedSize === size
-                          ? "border-coral bg-coral text-white"
-                          : "border-gray-200 hover:border-coral"
+                          ? "border-crimson bg-crimson text-white"
+                          : "border-gray-200 hover:border-crimson"
                       }`}
                     >
                       {size}
@@ -117,7 +117,7 @@ export default function ProductDetailClient({ id }: { id: string }) {
               {/* Color Selector */}
               <div className="mb-8">
                 <h3 className="font-bold text-sm uppercase tracking-wider mb-3">
-                  Color {selectedColor && <span className="text-coral normal-case">— {selectedColor}</span>}
+                  Color {selectedColor && <span className="text-crimson normal-case">— {selectedColor}</span>}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {product.colors.map((color) => (
@@ -126,8 +126,8 @@ export default function ProductDetailClient({ id }: { id: string }) {
                       onClick={() => setSelectedColor(color)}
                       className={`px-5 py-2.5 rounded-lg border-2 font-semibold text-sm transition-all ${
                         selectedColor === color
-                          ? "border-coral bg-coral text-white"
-                          : "border-gray-200 hover:border-coral"
+                          ? "border-crimson bg-crimson text-white"
+                          : "border-gray-200 hover:border-crimson"
                       }`}
                     >
                       {color}
@@ -141,14 +141,14 @@ export default function ProductDetailClient({ id }: { id: string }) {
                 <div className="flex items-center border-2 border-gray-200 rounded-lg">
                   <button
                     onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                    className="w-11 h-11 flex items-center justify-center font-bold text-lg hover:text-coral transition-colors"
+                    className="w-11 h-11 flex items-center justify-center font-bold text-lg hover:text-crimson transition-colors"
                   >
                     −
                   </button>
                   <span className="w-11 text-center font-bold">{quantity}</span>
                   <button
                     onClick={() => setQuantity(quantity + 1)}
-                    className="w-11 h-11 flex items-center justify-center font-bold text-lg hover:text-coral transition-colors"
+                    className="w-11 h-11 flex items-center justify-center font-bold text-lg hover:text-crimson transition-colors"
                   >
                     +
                   </button>
@@ -159,7 +159,7 @@ export default function ProductDetailClient({ id }: { id: string }) {
                   className={`flex-1 py-3.5 rounded-full font-bold text-lg transition-all ${
                     added
                       ? "bg-teal text-white scale-[0.98]"
-                      : "bg-coral text-white shadow-[0_6px_20px_rgba(255,107,107,0.35)] hover:bg-coral-dark hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(255,107,107,0.45)]"
+                      : "bg-crimson text-white shadow-[0_6px_20px_rgba(220,20,60,0.35)] hover:bg-crimson-dark hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(220,20,60,0.45)]"
                   }`}
                 >
                   {added ? "✓ Added to Cart!" : "Add to Cart"}
@@ -189,7 +189,7 @@ export default function ProductDetailClient({ id }: { id: string }) {
         <section className="py-16 bg-light">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-extrabold tracking-tight">You Might Also Like<span className="text-coral">.</span></h2>
+              <h2 className="text-3xl font-extrabold tracking-tight">You Might Also Like<span className="text-crimson">.</span></h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
               {relatedProducts.map((p) => p && <ProductCard key={p.id} product={p} />)}

@@ -16,12 +16,12 @@ export default function Newsletter() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-r from-coral to-[#FF8E53] text-white text-center">
+    <section className="py-20 bg-gradient-to-r from-crimson to-himalaya text-white text-center">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl font-extrabold mb-2">Join the PB Fam 🎉</h2>
-        <p className="opacity-90 mb-6">Get early access to drops, exclusive discounts, and good vibes in your inbox.</p>
+        <h2 className="text-3xl font-extrabold mb-2">Join the Bhusal Fam 🏔️</h2>
+        <p className="opacity-90 mb-6">Get early access to drops, exclusive discounts, and stories from Nepal in your inbox.</p>
         {submitted ? (
-          <p className="text-xl font-bold animate-bounce">Thanks for subscribing! 🎉</p>
+          <p className="text-xl font-bold animate-bounce">Dhanyabad! Thanks for subscribing! 🙏</p>
         ) : (
           <form onSubmit={handleSubmit} className="flex gap-3 max-w-md mx-auto flex-col sm:flex-row">
             <input
@@ -32,7 +32,7 @@ export default function Newsletter() {
               required
               className="flex-1 px-5 py-3.5 rounded-full text-dark outline-none"
             />
-            <button type="submit" className="bg-dark text-white px-7 py-3.5 rounded-full font-bold hover:bg-[#1a1a2e] transition-colors">
+            <button type="submit" className="bg-saffron text-dark px-7 py-3.5 rounded-full font-bold hover:bg-gold transition-colors">
               Subscribe
             </button>
           </form>
