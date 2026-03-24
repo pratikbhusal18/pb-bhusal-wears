@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { products } from "@/data/products";
 import { useCart } from "@/context/CartContext";
@@ -66,8 +67,15 @@ export default function ProductDetailClient({ id }: { id: string }) {
                   {product.badge}
                 </span>
               )}
-              <div className="bg-gradient-to-br from-snow to-sky/10 rounded-2xl h-[500px] flex items-center justify-center text-[10rem] select-none">
-                {product.emoji}
+              <div className="bg-gradient-to-br from-snow to-sky/10 rounded-2xl h-[500px] relative overflow-hidden">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-cover rounded-2xl"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
               </div>
             </div>
 

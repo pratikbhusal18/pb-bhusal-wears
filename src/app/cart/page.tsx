@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useCart } from "@/context/CartContext";
 
 export default function CartPage() {
@@ -46,8 +47,14 @@ export default function CartPage() {
                   className="flex items-center gap-5 bg-white p-5 rounded-xl shadow-md"
                 >
                   {/* Product emoji */}
-                  <div className="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center text-4xl shrink-0">
-                    {product.emoji}
+                  <div className="w-20 h-20 bg-gray-100 rounded-lg relative overflow-hidden shrink-0">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      className="object-cover"
+                      sizes="80px"
+                    />
                   </div>
 
                   {/* Info */}

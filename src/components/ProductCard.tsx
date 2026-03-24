@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Product } from "@/data/products";
 import AddToCartButton from "./AddToCartButton";
 
@@ -11,8 +12,14 @@ export default function ProductCard({ product }: { product: Product }) {
         </span>
       )}
       <Link href={`/shop/${product.id}`}>
-        <div className="h-72 bg-gradient-to-br from-snow to-sky/10 flex items-center justify-center text-7xl group-hover:scale-105 transition-transform duration-300 cursor-pointer">
-          {product.emoji}
+        <div className="h-72 relative overflow-hidden bg-gradient-to-br from-snow to-sky/10">
+          <Image
+            src={product.image}
+            alt={product.name}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          />
         </div>
       </Link>
       <div className="p-5">
