@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import CartIcon from "./CartIcon";
 
 const links = [
   { href: "/", label: "Home" },
@@ -23,7 +24,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop links */}
-        <ul className="hidden md:flex gap-8">
+        <ul className="hidden md:flex gap-8 items-center">
           {links.map(({ href, label }) => (
             <li key={href}>
               <Link
@@ -36,16 +37,22 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
+          <li>
+            <CartIcon />
+          </li>
         </ul>
 
-        {/* Mobile toggle */}
-        <button
-          className="md:hidden text-2xl"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-        >
-          {open ? "✕" : "☰"}
-        </button>
+        {/* Mobile: cart + toggle */}
+        <div className="flex items-center gap-2 md:hidden">
+          <CartIcon />
+          <button
+            className="text-2xl"
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
+          >
+            {open ? "✕" : "☰"}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}

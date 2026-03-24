@@ -1,4 +1,5 @@
 import { Product } from "@/data/products";
+import AddToCartButton from "./AddToCartButton";
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
@@ -20,6 +21,7 @@ export default function ProductCard({ product }: { product: Product }) {
             <span className="text-gray line-through text-sm ml-2">${product.oldPrice.toFixed(2)}</span>
           )}
         </p>
+        <AddToCartButton product={product} />
       </div>
     </div>
   );
