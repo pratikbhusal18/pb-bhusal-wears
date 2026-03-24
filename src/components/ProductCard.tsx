@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Product } from "@/data/products";
 import AddToCartButton from "./AddToCartButton";
 
@@ -9,11 +10,15 @@ export default function ProductCard({ product }: { product: Product }) {
           {product.badge}
         </span>
       )}
-      <div className="h-72 bg-gray-100 flex items-center justify-center text-7xl group-hover:scale-105 transition-transform duration-300">
-        {product.emoji}
-      </div>
+      <Link href={`/shop/${product.id}`}>
+        <div className="h-72 bg-gray-100 flex items-center justify-center text-7xl group-hover:scale-105 transition-transform duration-300 cursor-pointer">
+          {product.emoji}
+        </div>
+      </Link>
       <div className="p-5">
-        <h3 className="font-bold text-lg">{product.name}</h3>
+        <Link href={`/shop/${product.id}`} className="hover:text-coral transition-colors">
+          <h3 className="font-bold text-lg">{product.name}</h3>
+        </Link>
         <p className="text-gray text-sm mb-2">{product.categoryLabel}</p>
         <p>
           <span className="text-xl font-extrabold text-coral">${product.price.toFixed(2)}</span>
