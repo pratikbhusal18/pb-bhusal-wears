@@ -1,7 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Product } from "@/data/products";
 import AddToCartButton from "./AddToCartButton";
+
+const basePath = process.env.NODE_ENV === "production" ? "/pb-bhusal-wears" : "";
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
@@ -13,12 +14,10 @@ export default function ProductCard({ product }: { product: Product }) {
       )}
       <Link href={`/shop/${product.id}`}>
         <div className="h-72 relative overflow-hidden bg-gradient-to-br from-snow to-sky/10">
-          <Image
-            src={product.image}
+          <img
+            src={`${basePath}${product.image}`}
             alt={product.name}
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />
         </div>
       </Link>

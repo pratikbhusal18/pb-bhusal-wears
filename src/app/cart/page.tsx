@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useCart } from "@/context/CartContext";
+
+const basePath = process.env.NODE_ENV === "production" ? "/pb-bhusal-wears" : "";
 
 export default function CartPage() {
   const { items, removeFromCart, updateQuantity, clearCart, subtotal, itemCount } = useCart();
@@ -48,12 +49,10 @@ export default function CartPage() {
                 >
                   {/* Product emoji */}
                   <div className="w-20 h-20 bg-gray-100 rounded-lg relative overflow-hidden shrink-0">
-                    <Image
-                      src={product.image}
+                    <img
+                      src={`${basePath}${product.image}`}
                       alt={product.name}
-                      fill
-                      className="object-cover"
-                      sizes="80px"
+                      className="w-full h-full object-cover"
                     />
                   </div>
 

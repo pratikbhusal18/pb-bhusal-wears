@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import { products } from "@/data/products";
 import { useCart } from "@/context/CartContext";
 import ProductCard from "@/components/ProductCard";
+
+const basePath = process.env.NODE_ENV === "production" ? "/pb-bhusal-wears" : "";
 
 export default function ProductDetailClient({ id }: { id: string }) {
   const product = products.find((p) => p.id === id);
@@ -68,13 +69,10 @@ export default function ProductDetailClient({ id }: { id: string }) {
                 </span>
               )}
               <div className="bg-gradient-to-br from-snow to-sky/10 rounded-2xl h-[500px] relative overflow-hidden">
-                <Image
-                  src={product.image}
+                <img
+                  src={`${basePath}${product.image}`}
                   alt={product.name}
-                  fill
-                  className="object-cover rounded-2xl"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  priority
+                  className="w-full h-full object-cover rounded-2xl"
                 />
               </div>
             </div>
