@@ -153,22 +153,102 @@ Static files are exported to the `out/` directory.
 
 ## Deployment
 
-The site auto-deploys to **GitHub Pages** on every push to the `master` branch via the workflow in `.github/workflows/deploy.yml`.
+### Option A: GitHub Pages (Current Setup)
 
-**How it works:**
-1. GitHub Actions installs dependencies and runs `npm run build`
-2. Next.js exports static HTML/CSS/JS to `out/`
-3. The `out/` folder is deployed to GitHub Pages
+The site auto-deploys on every push to `master`. Here's how to set it up from scratch on a new repo:
 
-To deploy manually:
+**Step 1 — Create a GitHub repository**
+
+```bash
+gh repo create your-username/your-repo --public --source=. --push
+```
+
+**Step 2 — Enable GitHub Pages**
+
+1. Go to your repo on GitHub → **Settings** → **Pages**
+2. Under **Build and deployment**, set Source to **GitHub Actions**
+
+**Step 3 — Add the deployment workflow**
+
+The workflow file at `.github/workflows/deploy.yml` handles everything automatically:
+1. Installs Node.js 20 and project dependencies
+2. Runs `npm run build` (Next.js static export to `out/`)
+3. Uploads and deploys the `out/` folder to GitHub Pages
+
+**Step 4 — Update `next.config.ts` for your repo**
+
+```typescript
+const nextConfig: NextConfig = {
+  output: "export",
+  basePath: "/your-repo-name",  // ← change this to your repo name
+  images: { unoptimized: true },
+};
+```
+
+**Step 5 — Push and deploy**
 
 ```bash
 git add -A
-git commit -m "Your commit message"
+git commit -m "Deploy to GitHub Pages"
 git push origin master
 ```
 
-The site updates at [pratikbhusal18.github.io/pb-bhusal-wears](https://pratikbhusal18.github.io/pb-bhusal-wears/) within ~2 minutes.
+**Step 6 — Verify deployment**
+
+1. Go to your repo → **Actions** tab → watch the workflow run
+2. Once it shows ✅, your site is live at:
+   ```
+   https://your-username.github.io/your-repo-name/
+   ```
+
+> ℹ️ Every future push to `master` will automatically rebuild and redeploy the site within ~2 minutes.
+
+---
+
+### Option B: Vercel (Recommended for Full-Stack)
+
+When you add API routes, database, or authentication, switch to Vercel for full Next.js support:
+
+**Step 1 — Install Vercel CLI**
+
+```bash
+npm i -g vercel
+```
+
+**Step 2 — Remove static export config**
+
+In `next.config.ts`, remove `output: "export"` and `basePath` to enable full server-side features.
+
+**Step 3 — Deploy**
+
+```bash
+vercel
+```
+
+Follow the prompts. Vercel auto-detects Next.js and configures everything.
+
+**Step 4 — Set up auto-deploy**
+
+Link your GitHub repo in the [Vercel Dashboard](https://vercel.com/dashboard). Every push to `master` will auto-deploy.
+
+---
+
+### Option C: Manual / Self-Hosted
+
+**Step 1 — Build the static site**
+
+```bash
+npm run build
+```
+
+**Step 2 — Serve the `out/` folder**
+
+Upload the contents of the `out/` directory to any static hosting provider (Netlify, AWS S3, Cloudflare Pages, or your own web server).
+
+```bash
+# Quick local test
+npx serve out
+```
 
 ---
 
